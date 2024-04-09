@@ -12,10 +12,78 @@ SELECT city, LENGTH(city)  as Shortest
 FROM station
 ORDER BY LENGTH(city) desc, city asc LIMIT 1;
 
+**Challenge 2**
+
 > [!NOTE]
 > The city as well as the length of the characters in the city values were chosen. 
 > In the first statement we ordered the results by the length of characters in the values ranging from 3 - 21. 
 Then we requested to have those values be in ascending order by city name which would require us to be able to limit to the first row. 
 > In the second statement, we chose to have the length of characters in the city value be listed in descending  and limiting to the first row. 
 > We also add ", city asc" before "LIMIT 1" on the second statement to ensure we have an output of the first alphabetical option if there are multiple large city names of the same character length. 
+
+[Weather observation Station 6](https://hackerrank-challenge-pdfs.s3.amazonaws.com/9341-weather-observation-station-6-English?response-content-disposition=inline%3B%20filename%3Dweather-observation-station-6-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240409T152311Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=a9f1e44db987e41405af517e0aea8941e5e3e2ae7843eb9b7d81cf8a3825fcef)
+
+SQL Input: 
+
+SELECT DISTINCT(city) 
+FROM station
+WHERE LEFT(city, 1) IN ('a', 'e', 'i', 'o', 'u');
+
+> [!NOTE]
+> Used DISTINCT to ensure no duplicate city names were listed. 
+> USED LEFT() function in the WHERE clause to extract the first character from the string starting from the left and the IN operator to specify the vowel conditions. 
+
+ 
+
+**Challenge 3**
+
+[Weather Observation Station 7](https://hackerrank-challenge-pdfs.s3.amazonaws.com/9342-weather-observation-station-7-English?response-content-disposition=inline%3B%20filename%3Dweather-observation-station-7-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240409T161056Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=5d7a57be0ee7178089923de177adfc8c16b5fdc9198c06d7bc5ab567c1dbff52)
+
+SQL Input:
+
+SELECT DISTINCT(city)
+FROM station
+WHERE RIGHT(city, 1) IN ('a', 'e', 'i', 'o', 'u');
+
+>[!NOTE]
+> Challenge 3 was completed the same as Challenge 2 except with the use of the RIGHT() function instead of the left.
+
+**Challenge 4**
+
+[Weather Observation Station 8](https://hackerrank-challenge-pdfs.s3.amazonaws.com/9343-weather-observation-station-8-English?response-content-disposition=inline%3B%20filename%3Dweather-observation-station-8-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240409T161845Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=ba385bd1b59dfc16af6c2c1d826f36cc49e31922af8e4aef0b3bdb0c105d2a64)
+
+SQL Input: 
+
+SELECT DISTINCT(city) 
+FROM station
+WHERE LEFT(city, 1) IN ('a', 'e', 'i', 'o', 'u') AND RIGHT(city, 1) IN ('a', 'e', 'i', 'o', 'u');
+
+>[!NOTE]
+> The addition of the AND operator was used to set two conditions for the city names. 
+
+**Challenge 5**
+
+[Weather Observation Station 9](https://hackerrank-challenge-pdfs.s3.amazonaws.com/9344-weather-observation-station-9-English?response-content-disposition=inline%3B%20filename%3Dweather-observation-station-9-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240409T162656Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=007be22a84edaf2870fea84987e3b07d9e4dabad83703adcf26db219da616a62)
+
+SQL Input:
+
+SELECT DISTINCT(city)
+FROM station 
+WHERE LEFT(city, 1) NOT IN ('a', 'e', 'i', 'o', 'u');
+
+>[!NOTE]
+> "NOT IN" was used to indicate retrieving results should not contain the specified values. 
+
+**Challenge 6**
+
+[Weather Observation Station 10](https://hackerrank-challenge-pdfs.s3.amazonaws.com/9345-weather-observation-station-10-English?response-content-disposition=inline%3B%20filename%3Dweather-observation-station-10-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240409T163211Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=48de9fda815ce5f659fe65c62731a87bf883ce995f60913219c2b4b7a48e61b0)
+
+SQL Input:
+
+SELECT DISTINCT(city)
+FROM station
+WHERE RIGHT(city, 1) NOT IN ('a', 'e', 'i', 'o', 'u');
+
+>[!NOTE]
+> The only change in this query is the use of the RIGHT() function instead of the LEFT() that was used in challenge 5. 
 
