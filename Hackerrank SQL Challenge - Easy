@@ -1,0 +1,21 @@
+**Challenge 1**
+
+[Weather observation Station 5](https://hackerrank-challenge-pdfs.s3.amazonaws.com/9340-weather-observation-station-5-English?response-content-disposition=inline%3B%20filename%3Dweather-observation-station-5-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240409%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240409T140923Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=c2fbb278d8b5d44bc1bf4c2be9567af5aa4a636b3a8003769462b3d0449b11df)
+
+SQL Input:
+
+SELECT city, LENGTH(city)  as Longest
+FROM station
+ORDER BY LENGTH(city) , city asc LIMIT 1;
+
+SELECT city, LENGTH(city)  as Shortest
+FROM station
+ORDER BY LENGTH(city) desc, city asc LIMIT 1;
+
+> [!NOTE]
+> The city as well as the length of the characters in the city values were chosen. 
+> In the first statement we ordered the results by the length of characters in the values ranging from 3 - 21. 
+Then we requested to have those values be in ascending order by city name which would require us to be able to limit to the first row. 
+> In the second statement, we chose to have the length of characters in the city value be listed in descending  and limiting to the first row. 
+> We also add ", city asc" before "LIMIT 1" on the second statement to ensure we have an output of the first alphabetical option if there are multiple large city names of the same character length. 
+
