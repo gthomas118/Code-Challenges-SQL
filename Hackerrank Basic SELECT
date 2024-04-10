@@ -1,0 +1,71 @@
+04/10/2024
+
+**Challenge 1**
+
+[Weather Observation Station 11](https://hackerrank-challenge-pdfs.s3.amazonaws.com/9346-weather-observation-station-11-English?response-content-disposition=inline%3B%20filename%3Dweather-observation-station-11-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240410T142122Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=0aa3e0dd895a7f683c35945ec6c9cd5db00015c3152ca01b55f3947ca13c860d)
+
+SQL Input:
+
+SELECT DISTINCT(city)
+FROM station
+WHERE LEFT(city, 1) NOT IN ('a', 'e', 'i', 'o', 'u') OR RIGHT(city, 1) NOT IN ('a', 'e', 'i', 'o', 'u');
+
+>[!NOTE]
+> Similar to the challenges yesterday, I used the LEFT() and RIGHT() functions notating as well that the conditions in the NOT IN operator should only apply to the first character in the value from the left or the right. 
+> Used the OR operator to specify the exclusion of city names that not only start with a vowel but also those that may not start with a vowel but end in one instead. 
+
+**Challenge 2**
+
+[Weather Observation Station 12](https://hackerrank-challenge-pdfs.s3.amazonaws.com/9347-weather-observation-station-12-English?response-content-disposition=inline%3B%20filename%3Dweather-observation-station-12-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240410T142542Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=101422614e805bec5551b868e36f25f76bda24077d53bba255cd0725be0b4953)
+
+SQL Input:
+
+SELECT DISTINCT(city)
+FROM station
+WHERE LEFT(city, 1) NOT IN ('a', 'e', 'i', 'o', 'u') AND RIGHT(city, 1) NOT IN ('a', 'e', 'i', 'o', 'u');
+
+>[!NOTE]
+> The difference in this query is the use of the AND operator which specified the exclusion of the city names that both start and end with a vowel. 
+
+**Challenge 3**
+
+[Higher Than 75 Marks](https://hackerrank-challenge-pdfs.s3.amazonaws.com/12965-more-than-75-marks-English?response-content-disposition=inline%3B%20filename%3Dmore-than-75-marks-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240410T143806Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=2e3a50a293a466a91dc97a77c1f022785b127809dd7e23ff1dcbfac5e9698b05)
+
+SQL Input:
+
+SELECT name
+FROM students
+WHERE marks > 75
+ORDER BY RIGHT(name, 3) asc, ID asc;
+
+>[!NOTE]
+> Used the greater than operator to only retrieve marks higher than 75. 
+> Used the Right() function in the ORDER BY clause that stipulates the right three characters in the name values should be retrieved in ascending order with the ID being used as the secondary sort condition. 
+
+**Challenge 4**
+
+[Employee Names](https://hackerrank-challenge-pdfs.s3.amazonaws.com/19629-name-of-employees-English?response-content-disposition=inline%3B%20filename%3Dname-of-employees-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240410T152819Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=63618edf28a069dbabc5ae8cb97c0862e037f86b66ec5965fb426b05a2729447)
+
+SQL Input:
+
+SELECT name
+FROM Employee
+ORDER BY name asc;
+
+>[!NOTE]
+> Ordered the name values in ascending to achieve a list in alphabetical order. 
+
+**Challenge **
+
+[Employee Salaries](https://hackerrank-challenge-pdfs.s3.amazonaws.com/19630-salary-of-employees-English?response-content-disposition=inline%3B%20filename%3Dsalary-of-employees-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240410%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240410T153304Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6247bf5eec3910b734b67bf4d21add3287e26a789034e50b15b0d3e1d9705477)
+
+SQL Input:
+
+SELECT name
+FROM Employee
+WHERE salary > 2000 AND months < 10
+ORDER BY employee_id asc;
+
+>[!NOTE]
+> Used the AND operator in the WHERE clause to set parameters for query retrieval of a salary greater than 2000 and who has been employed for less than 10 months. 
+> similar to the previous challenge, ordered ascending, this time by the employee_id. 
