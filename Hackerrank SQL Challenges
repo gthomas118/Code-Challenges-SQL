@@ -1,0 +1,23 @@
+04/12/2024
+
+**Challenge 1**
+
+[Type of Triangle](https://hackerrank-challenge-pdfs.s3.amazonaws.com/12887-what-type-of-triangle-English?response-content-disposition=inline%3B%20filename%3Dwhat-type-of-triangle-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240413%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240413T020318Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6c3c41912de56f39babd18e1f599a485bcbb4d341a13f697099cf3ed59a8fd98)
+
+SQL Input:
+
+SELECT CASE
+ WHEN A + B <= C or B + C <= A or C + A <= B THEN "Not A Triangle"
+ WHEN A = B AND B = C AND A = C THEN "Equilateral"
+ WHEN A = B or B = C or A = C THEN "Isosceles"
+ ELSE "Scalene"
+END AS "Triangle Type"
+FROM Triangles;
+
+>[!NOTE]
+> Detemined the conditions for a Triangle to exist using the Triangle Inequality Theorem and the conditions for an Equilateral, Isosceles, and Scalene Triangle. 
+> Used a CASE statement with the Triangle Type Alias to set the conditions with first deciding on if a triangle exists. 
+> Then deciding if it is a triangle does it have all equal sides? 
+> If the triangle did not have all equal sides I set a condition to see if at least two sides were equal. 
+> Used my Else statement for anything else that would be a triangle and not meet any of the previous conditions.  
+
