@@ -21,3 +21,53 @@ FROM Triangles;
 > If the triangle did not have all equal sides I set a condition to see if at least two sides were equal. 
 > Used my Else statement for anything else that would be a triangle and not meet any of the previous conditions.  
 
+**Challenge 2**
+
+[Revising Aggregations - The Count Function](https://hackerrank-challenge-pdfs.s3.amazonaws.com/12471-revising-aggregations-the-count-function-English?response-content-disposition=inline%3B%20filename%3Drevising-aggregations-the-count-function-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240413%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240413T021421Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=a0e79c520fe6b30f3cf86213fe319e29291972c855b8fffc5e0ea784c8e963d4)
+
+SQL Input:
+
+SELECT COUNT(name)
+FROM City
+WHERE population > 100000;
+
+>[!NOTE]
+> Used the COUNT function on the name column paired with the WHERE statement to get the number of cities who have a population greater than 100,000.
+
+**Challenge 3**
+
+[Revising Aggregations - The Sum Function](https://hackerrank-challenge-pdfs.s3.amazonaws.com/12468-revising-aggregations-sum-English?response-content-disposition=inline%3B%20filename%3Drevising-aggregations-sum-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240413%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240413T021932Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=b50e175cf07d18f6880693fd551aa5ce1ade8fe01bbd0b913a7b9638620d3171)
+
+SQL Input:
+
+SELECT SUM(population)
+FROM City
+WHERE District = 'California';
+
+>[!NOTE]
+> Used the SUM function to calculate the total population of all cities with a District of California filtered using the WHERE statement. 
+
+**Challenge 4**
+
+[Revising Aggregations - Averages](https://hackerrank-challenge-pdfs.s3.amazonaws.com/12470-revising-aggregations-the-average-function-English?response-content-disposition=inline%3B%20filename%3Drevising-aggregations-the-average-function-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240413%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240413T022250Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=6bcfbdeb27fa8557133365b04465123cd4ca7b98a925549c90b3da568f2a0d4a)
+
+SQL Input:
+
+SELECT AVG(Population)
+FROM City
+WHERE District = 'California';
+
+>[!NOTE]
+> Used the AVG function to find the average population of cities with the district of California. 
+
+**Challenge 5**
+
+[Average Population](https://hackerrank-challenge-pdfs.s3.amazonaws.com/8339-average-population-English?response-content-disposition=inline%3B%20filename%3Daverage-population-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240413%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240413T022650Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=3c5d78335e342900d266bebe325a01e9b1bafd15481eea1442e1445ea0f44f7b)
+
+SQL Input:
+
+SELECT ROUND(AVG(population))
+FROM City;
+
+>[!NOTE]
+> Used the ROUND function alongside the AVerage funtion to Round the value of AVG(population).
