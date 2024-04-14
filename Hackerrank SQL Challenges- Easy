@@ -1,0 +1,59 @@
+04/14/2024
+
+**Challenge 1**
+
+[Japan Population](https://hackerrank-challenge-pdfs.s3.amazonaws.com/8340-japan-population-English?response-content-disposition=inline%3B%20filename%3Djapan-population-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240414T175959Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=372c6b4ce2d69c1759e347202f06b0204ce539558ac8f943614027baac51e327)
+
+SQL Input:
+
+SELECT SUM(population)
+FROM city
+WHERE countrycode = 'JPN';
+
+>[!NOTE]
+> Used SUM() function to calculate the total population of Japan paired with the WHERE function to filter to ensure only cities with a JAPAN country code are used in the calculation. 
+
+**Challenge 2**
+
+[Population Density Difference](https://hackerrank-challenge-pdfs.s3.amazonaws.com/8341-population-density-difference-English?response-content-disposition=inline%3B%20filename%3Dpopulation-density-difference-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240414%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240414T181611Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=5d52169595ff515046406d5c738e6e2afb0a2237ad5e5b24692af6e01602dd8a)
+
+SQL Input:
+
+SELECT MAX(population) - MIN(population) 
+FROM city;
+
+>[!NOTE]
+> USED MAX() and MIN() functions to subtract the largest population from the smallest population in order to display the difference between both. 
+
+**Challenge **
+
+[]()
+
+SQL Input:
+
+
+
+>[!NOTE]
+>
+
+**Challenge **
+
+[]()
+
+SQL Input:
+
+
+
+>[!NOTE]
+>
+
+**Challenge **
+
+[]()
+
+SQL Input:
+
+
+
+>[!NOTE]
+>
