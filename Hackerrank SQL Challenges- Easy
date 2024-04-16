@@ -25,16 +25,19 @@ FROM city;
 >[!NOTE]
 > USED MAX() and MIN() functions to subtract the largest population from the smallest population in order to display the difference between both. 
 
-**Challenge **
+**Challenge 3**
 
-[]()
+[The Blunder](https://hackerrank-challenge-pdfs.s3.amazonaws.com/12893-the-blunder-English?response-content-disposition=inline%3B%20filename%3Dthe-blunder-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240416%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240416T024737Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=1073af4cbb1fff821abd0029f6b97ada13ff35ae39394e806448d4c30638bc84)
 
 SQL Input:
 
-
+SELECT CEIL(AVG(salary) - AVG(CAST(REPLACE(salary, 0, '')AS DECIMAL)))
+FROM employees;
 
 >[!NOTE]
->
+> Used CEIL() to round up to the next integer while finding the average salary.
+> Calculated the average salary while replacing the '0' in the values while using CAST to change the calculation to a decimal. 
+> Subtracted the average without the zeros from the correct average to get the amount of error. 
 
 **Challenge **
 
