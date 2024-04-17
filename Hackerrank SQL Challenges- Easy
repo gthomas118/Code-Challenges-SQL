@@ -39,16 +39,22 @@ FROM employees;
 > Calculated the average salary while replacing the '0' in the values while using CAST to change the calculation to a decimal. 
 > Subtracted the average without the zeros from the correct average to get the amount of error. 
 
-**Challenge **
+**Challenge 4**
 
-[]()
+[Top Earners](https://hackerrank-challenge-pdfs.s3.amazonaws.com/19631-earnings-of-employees-English?response-content-disposition=inline%3B%20filename%3Dearnings-of-employees-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240417T233504Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=48bb294dc2b1bdfa988442f0942e5b8e514a320b73fa3cf0a753b00ef943737e)
 
 SQL Input:
 
-
+SELECT months * salary, COUNT(*)
+FROM Employee
+GROUP BY months * salary
+ORDER BY months * salary Desc
+LIMIT 1;
 
 >[!NOTE]
->
+> Calculated the earnings of each employee as well as the count of each employee
+> Grouped by the calculated earnings amount and ordered by the calculated earnings amount in Descending order so the largest amount will be at the top. 
+> Limited the results to the first row which provides us with the highest calculated salary and the count of employees who have that salary. 
 
 **Challenge **
 
