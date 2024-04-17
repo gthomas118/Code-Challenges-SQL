@@ -56,13 +56,14 @@ LIMIT 1;
 > Grouped by the calculated earnings amount and ordered by the calculated earnings amount in Descending order so the largest amount will be at the top. 
 > Limited the results to the first row which provides us with the highest calculated salary and the count of employees who have that salary. 
 
-**Challenge **
+**Challenge 5**
 
-[]()
+[Weather Observation Station 2](https://hackerrank-challenge-pdfs.s3.amazonaws.com/9337-weather-observation-station-2-English?response-content-disposition=inline%3B%20filename%3Dweather-observation-station-2-English.pdf&response-content-type=application%2Fpdf&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAR6O7GJNX5DNFO3PV%2F20240417%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20240417T234516Z&X-Amz-Expires=3600&X-Amz-SignedHeaders=host&X-Amz-Signature=0898edb804d6e0f3a19ca9ee184babce3513cf6dfec2573563f239b98d17c0a3)
 
 SQL Input:
 
-
+SELECT ROUND(SUM(LAT_N), 2), ROUND(SUM(LONG_W), 2)
+FROM STATION;
 
 >[!NOTE]
->
+> Used the ROUND() function on the SUM of the LAT_N and LONG_W columns making sure to specify to only present to the 2nd decimal place. 
